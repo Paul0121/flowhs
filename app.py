@@ -13,7 +13,7 @@ conversation = st.text_area("Paste your conversation here:")
 if st.button("Summarize"):
     if conversation.strip():
         # Use the summarization model
-        summary = summarizer(conversation, max_length=500, min_length=100, do_sample=False)
+        summary = summarizer(conversation, max_length=1000, min_length=30, do_sample=False)
         
         # Extract and display the summary text
         st.subheader("Summary:")
